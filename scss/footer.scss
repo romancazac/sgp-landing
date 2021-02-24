@@ -1,0 +1,131 @@
+.footer {
+    background-color: #fcfcfc;
+    // .footer__parteners
+
+    &__parteners {
+        padding:30px 150px 30px 0;
+        justify-content: space-evenly;
+
+    }
+
+    // .footer__items
+
+    &__items {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 50px 0;
+        border-top: 1px solid #000000;
+        
+    }
+
+    // .footer__list
+
+    &__list {
+        margin: 0 30px;
+        li {
+            margin: 0 0 20px 0;
+        }
+    }
+
+    // .footer__name
+
+    &__name {
+        display: inline-block;
+        font-size: 30px;
+        font-weight: 400;
+        margin: 0 0 40px 0;
+        color: #000000;
+    }
+
+    // .footer__link
+
+    &__link {
+        display: inline-block;
+        font-size: 20px;
+        font-weight: 400;
+        color: #000000;
+        &:hover {
+            text-decoration: underline;
+        }
+        span{
+            padding-left: 45px;
+            display: inline-block;
+            line-height: 30px;
+        }
+        // .footer__link_tel
+
+        &_tel {
+            position: relative;
+            background: url("../img/tel.png") left center no-repeat;;
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -8px;
+                display: inline-block;
+                width: 272px;
+                height: 2px;
+                background-color: rgba(0, 0, 0, 0.44);
+            }
+        }
+
+        // .footer__link_mail
+
+        &_mail {
+            background: url("../img/mail.png") left center no-repeat;
+            @extend .footer__link_tel;
+        }
+
+        // .footer__link_fb
+
+        &_fb {
+            background: url("../img/fb.png") left center no-repeat;
+            @extend .footer__link_tel;
+        }
+
+        // .footer__link_vibere
+
+        &_vibere {
+            background: url("../img/vb.png") left center no-repeat;
+        }
+    }
+    
+
+}
+
+.copyright {
+    padding: 20px 0;
+    border-top:1px solid #000000;
+
+    // .copyright__row
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // .copyright__text
+
+    &__text {
+        font-size: 21px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        margin-right: 20px;
+    }
+
+    // .copyright__logo
+
+    &__logo {
+        display: inline-block;
+        background: url("../img/webit.png") bottom center no-repeat;
+        background-size: cover;
+        width: 60px;
+        height: 15px;
+        transition: all  .3s linear;
+        &:hover {
+            background: url("../img/webit.png") top ;
+            background-size: cover;
+        }
+    }
+}

@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  
+  *, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  :focus, :active {
+    outline: none;
+  }
+  
+  a:focus, a:active {
+    outline: none;
+  }
+  
+  nav, footer, header, aside {
+    display: block;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  input, button, textarea {
+    font-family: inherit;
+  }
+  
+  input::-ms-clear {
+    display: none;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+  
+  a, a:visited {
+    text-decoration: none;
+    //color: inherit;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    
+  }
+  
+  ul, li {
+    list-style: none;
+  }
+  
+  img {
+    vertical-align: top;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inheri;
+  }
+
+
+
+:root {
+    --color-dark-gray: #8B868F;
+    --color-light-gray: #ECEBED;
+    --color-bg-gray: #F2F2F0;
+    --color-white: #FFFFFF;
+    --color-Orange: #F7941E;
+    --color-blue:#0092E4;
+  }
+@mixin font($font_name, $file_name, $weight, $style) {
+
+    @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+    }
+}
+@import "fonts";
+@import "header";
+
+body {
+    font-family: "CoreSansC";
+    font-weight: 400;
+    background: --color-white;
+    color: var(--color-black);
+    min-width: 320px;
+
+}
+
+
+.container {
+    max-width: 1510px;
+    margin: 0 auto;
+    padding: 0 20px;
+    &_beeg{
+      max-width: 1900px;
+    }
+
+
+   
+}
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 58px;
+  padding: 0 40px;
+  background-color: #006bb6;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  transition: all 0.2s;
+  &_section {
+    min-height: 40px;
+    font-size: 18px;
+    padding: 0 20px;
+  }
+  &:hover {
+      background-color: #006ab696;
+  }
+}
+
+
+@import "page";
+@import "footer";
+
+
+
